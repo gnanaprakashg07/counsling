@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="doctor.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            text-align: center;
+        }
+        .style3
+        {
+            font-size: x-large;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            color: White;
+        }
+        .style4
+        {
+            width: 256px;
+            height: 256px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="prakash">
+    <div class="page">
+        <div class="header" style="background-color: #0000FF">
+            <div class="title">
+                <h1 class="style2">
+                    PSYCHOLOGICAL COUNSELING INSTITUTION
+                </h1>
+            </div>
+            <div class="style3">
+                <strong>WELCOME PSYCHOLOGIST<br />
+                </strong>
+                <img alt="CS" class="style4" src="images/11765279.png" /></div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="DoctorHome" Value="DoctorHome" 
+                            NavigateUrl="~/dochome.aspx"/>
+                        <asp:MenuItem NavigateUrl="~/docassess.aspx" Text="PatientAssessment" 
+                            Value="PatientAssessment"></asp:MenuItem>
+                        <asp:MenuItem Text="ViewAppointment" Value="ViewAppointment" 
+                            NavigateUrl="~/vappoint.aspx"/>
+                        <asp:MenuItem Text="ViewConsult" Value="ViewConsult" 
+                            NavigateUrl="~/vconsult.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="ConsultReply" Value="ConsultReply" 
+                            NavigateUrl="~/conreply.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="ViewFeedback" 
+                            Value="ViewFeedback" NavigateUrl="~/vfeedd.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="ViewClients" Value="ViewClients" 
+                            NavigateUrl="~/vclient.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/login.aspx">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

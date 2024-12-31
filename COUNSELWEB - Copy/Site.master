@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 937px;
+            height: 195px;
+        }
+        .style2
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header" style="background-color: #003399">
+            <div class="title">
+                <h1 class="style2">
+                    PSYCHOLOGICAL COUNSELING INSTITUTION
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <img alt="DS" class="style1" src="images/Header-12.png" /></div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="~/services.aspx" Text="Services" Value="Services">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/login.aspx" Text="Login" Value="Login">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/register.aspx" Text="Registration" 
+                            Value="Registration"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/contactus.aspx" Text="ContactUs" Value="ContactUs">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Feedback" Value="Feedback" NavigateUrl="~/feedback.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

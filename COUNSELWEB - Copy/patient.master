@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="patient.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            text-align: center;
+        }
+        .style3
+        {
+            font-size: x-large;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            color: White;
+        }
+        .style4
+        {
+            width: 256px;
+            height: 256px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header" style="background-color: #0000FF">
+            <div class="title">
+                <h1 class="style2">
+                    PSYCHOLOGICAL COUNSELING INSTITUTION
+                </h1>
+            </div>
+            <div class="style3">
+                <strong>WELCOME PATIENT<br />
+                </strong>
+                <img alt="CS" class="style4" src="images/11647474.png" /></div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="PatientHome" Value="PatientHome" 
+                            NavigateUrl="~/pathome.aspx"/>
+                        <asp:MenuItem Text="View Consultation" Value="View Consultation" 
+                            NavigateUrl="~/patconsult.aspx"/>
+                        <asp:MenuItem Text="Book Appointment" Value="Book Appointment" 
+                            NavigateUrl="~/bookapp.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Update Details" Value="Update Details" 
+                            NavigateUrl="~/uppat.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Give Feedback" 
+                            Value="Give Feedback" NavigateUrl="~/givefeed.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/login.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
